@@ -10,7 +10,7 @@
         <!-- THIS PRINTS 3 <li> ELEMENTS OF EACH??????????????????? -->
         {% if all_books[0] %}
             {% for book in all_books %}
-            <li>{{ book['title'] }} - {{ book['author'] }} - {{ book['rating'] }}/10 <a href="{{ url_for('edit_rating', book_id=book['id']) }}">Edit Rating</a></li>
+            <li><a href="{{ url_for('delete', book_id=book.id) }}">Delete</a> -{{ book.title }} - {{ book.author }} - {{ book.rating }}/10 <a href="{{ url_for('edit_rating', book_id=book.id) }}">Edit Rating</a></li>
             <!-- <li>{{ book }}</li> -->
             {% endfor %}
         {% else %}
