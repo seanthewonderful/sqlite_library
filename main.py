@@ -61,6 +61,12 @@ def add():
     return render_template('add.html')
 
 
+@app.route('/edit_rating/<book_id>')
+def edit_rating(book_id):
+    
+    return render_template('edit_rating.html',  sddfdsx)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
